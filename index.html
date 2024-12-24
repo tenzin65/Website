@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dawa Karpo</title>
+    <link rel="stylesheet" href="styles.css">
+    
+       
+</head>
+<body>
+    <!-- nav bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="pic/1.png" height="50px" width="50px">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="front.html">Logout</a></li>
+            <li><a href="#search" id="searchLink">Search</a></li>
+        </ul>
+
+        <!-- Search bar inside navbar -->
+        <div class="search-bar" id="searchBar">
+            <input type="text" placeholder="Search...">
+            <button>Search</button>
+        </div>
+    </nav>
+
+    <script>
+        // JavaScript to toggle the search bar visibility
+        document.getElementById('searchLink').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default link behavior
+            const searchBar = document.getElementById('searchBar');
+            if (searchBar.style.display === 'none' || searchBar.style.display === '') {
+                searchBar.style.display = 'flex';
+            } else {
+                searchBar.style.display = 'none';
+            }
+        });
+    </script>
+    <!-- Slider -->
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <img src="pic/6.png" alt="Slide 1">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="pic/2.png" alt="Slide 2">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="pic/4.jpg" alt="Slide 3">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="pic/5.jpg" alt="Slide 4">
+      </div>
+      
+      <div class="mySlides fade">
+        <img src="pic/7.png" alt="Slide 5">
+      </div>
+      
+      <div class="mySlides fade">
+        <img src="pic/8.png" alt="Slide 6">
+      </div>
+  </div>
+  
+  <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+  </div>
+
+  <script>
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 3000); // Change image every 3 seconds
+      }
+  </script>
+  <!-- image  -->
+  
+  <div class="image-container">
+    <div class="item">
+      <div class="image-wrapper">
+        <img src="pic/5.jpg" class="image">
+        <p>Fashion show</p>
+      </div>
+      <div class="image-wrapper">
+        <img src="pic/5.jpg" class="image">
+        <p>Fashion show</p>
+      </div>
+      <div class="image-wrapper">
+        <img src="pic/5.jpg" class="image">
+        <p>Fashion show</p>
+      </div>
+      <div class="image-wrapper">
+        <img src="pic/5.jpg" class="image">
+        <p>Fashion show</p>
+      </div>
+      <div class="image-wrapper">
+        <img src="pic/5.jpg" class="image">
+        <p>Fashion show</p>
+      </div>
+      <div class="image-wrapper">
+        <img src="pic/8.png" class="image">
+        <p>Fashion show</p>
+      </div>
+      <div class="image-wrapper">
+        <img src="pic/6.png" class="image">
+        <p>Fashion show</p>
+      </div>
+      <div class="image-wrapper">
+        <img src="pic/7.png" class="image">
+        <p>Fashion show</p>
+      </div>
+    </div>
+  </div>
+  <?php
+session_start();
+
+// Check if the user is logged in
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.html");
+    exit();
+}
+
+echo "Welcome, " . htmlspecialchars($_SESSION['email']) . "!";
+?>
+
+  
+</body>
+</html>

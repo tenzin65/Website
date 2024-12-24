@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #efe7ff; /* Light purple background */
+    }
+
+    .container {
+      text-align: center;
+      width: 350px;
+      background-color: #fff;
+      border-radius: 15px;
+      padding: 20px 30px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* - */
+
+    .logo img {
+      width: 200px;
+      height: 100px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: bold;
+      color: #000;
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      font-size: 22px;
+      font-weight: 500;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: #80bfff;
+      box-shadow: 0 0 5px rgba(0, 150, 255, 0.5);
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 10px 0;
+      margin: 10px 0;
+      font-size: 16px;
+      color: #fff;
+      background-color: #80bfff; /* Light blue button color */
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #66a3ff; /* Darker blue on hover */
+    }
+
+    .form-footer {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .form-footer a {
+      color: #80bfff;
+      text-decoration: none;
+    }
+
+    .form-footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head> 
+<body>
+  <div class="container">
+    <!-- <div class="back-arrow">
+      &larr;
+    </div> -->
+    <div class="logo">
+      <img src="pic/1.png" alt="Dog Logo">
+    </div>
+    <h1>Welcome To</h1>
+    <h2>Dawa Karpo</h2> 
+
+    <!-- Login Form -->
+    <form action="db.php" method="POST">
+      <div class="form-group">
+        <label for="email">Email or Username</label>
+        <input type="text" id="email" name="email" placeholder="Enter your email or username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      </div>
+      <div class="form-group">
+        <label for="confirm_password">Confirm Password</label>
+        <input type="confirm_password" id="confirm_password" name="confirm_password" placeholder="Reenter your password" required>
+      </div> 
+      <button type="submit" class="btn">Sign up</button>
+      
+      
+      
+     </form>
+    <!-- <form action="login.html" method="GET">
+        <button type="submit" class="btn">Sign up</button>
+      </form>
+  </div> -->
+  
+</body>
+</html>
